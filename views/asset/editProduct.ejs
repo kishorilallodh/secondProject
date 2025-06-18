@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Product</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="file"],
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Edit Product</h2>
+     <form action="/api/editproduct/<%= product._id %>" method="POST" enctype="multipart/form-data">
+      <input type="text" name="pname" value="<%= product.pname %>" required />
+      <input type="text" name="pbname" value="<%= product.pbname %>" required />
+      <input type="text" name="pcategory" value="<%= product.pcategory %>" required />
+      <input type="number" name="pprice" value="<%= product.pprice %>" required />
+      <textarea name="pdesc"><%= product.pdesc %></textarea>
+      <input type="file" name="pimage" />
+      <button type="submit">Update Product</button>
+    </form>
+  </div>
+</body>
+</html>

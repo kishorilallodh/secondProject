@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Form Design</title>
+    <link rel="icon" href="https://media.istockphoto.com/id/1436334616/vector/gold-sacred-om-sign-on-white-background.jpg?s=612x612&w=0&k=20&c=OvojfjMhkbjSjPzErTfIN-c2Q6lO2O5TqmPM5H3dMfM=">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo" tabindex="0">Mayntra</div>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li tabindex="0">Home</li>
+          <li tabindex="0">Men</li>
+          <li tabindex="0">Women</li>
+          <li tabindex="0">Kids</li>
+          <li tabindex="0">Sale</li>
+          <li tabindex="0">Contact</li>
+        </ul>
+        <button class="btn-nav">login</button>
+      </nav>
+    </header>
+    <div class="back-cantainer">
+      <div class="form-container">
+        <h2>Product Details</h2>
+        <form action="/api/submitproduct" method="post" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pname">Product Name</label>
+              <input
+                type="text"
+                name="pname"
+                id="pname"
+                class="form-input"
+                placeholder="Enter Product Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="pprice">Product Price</label>
+              <input
+                type="number"
+                name="pprice"
+                id="pprice"
+                class="form-input"
+                placeholder="Enter Product Price"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pcategory">Category Name</label>
+              <input
+                type="text"
+                name="pcategory"
+                id="pcategory"
+                class="form-input"
+                placeholder="Enter Product Category"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="pbname">Product Brand Name</label>
+              <input
+                type="text"
+                name="pbname"
+                id="pbname"
+                class="form-input"
+                placeholder="Enter Product brand"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pdesc">Product Description</label>
+              <textarea
+                name="pdesc"
+                id="pdesc"
+                rows="4"
+                class="form-textarea"
+                placeholder="Enter a detailed description of the product"
+                required
+              ></textarea>
+            </div>
+          </div>
+           <div class="form-group">
+              <label class="form-label" for="pimage">Product Image</label>
+              <input
+                type="file"
+                name="pimage"
+                id="pimage"
+                class="form-input"
+                placeholder="Enter Product brand"
+                required
+                multiple
+              />
+            </div>
+          <button type="submit" class="sbt-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <footer>&copy; 2024 Mayntra. All rights reserved.</footer>
+  </body>
+</html>
