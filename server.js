@@ -17,7 +17,7 @@ app.set('views', __dirname + '/views')
 app.use(cookieParser());
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/flipkart')
+mongoose.connect('mongodb+srv://kishorilallodh2:54N58PiEDlbgNMI4@cluster0.qexgmon.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error(err))
 
